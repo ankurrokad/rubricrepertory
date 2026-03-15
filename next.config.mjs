@@ -1,19 +1,33 @@
 import { imageHosts } from './image-hosts.config.mjs';
+import withPWAInit from 'next-pwa';
+
+const withPWA = withPWAInit({
+  dest: 'public',
+  register: true,
+  skipWaiting: true,
+  disable: process.env.NODE_ENV === 'development',
+  buildExcludes: [/middleware-manifest\.json$/],
+  publicExcludes: ['!robots.txt', '!sitemap.xml'],
+});
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   productionBrowserSourceMaps: true,
   distDir: process.env.DIST_DIR || '.next',
+
   typescript: {
     ignoreBuildErrors: true,
   },
+
   eslint: {
     ignoreDuringBuilds: true,
   },
+
   images: {
     remotePatterns: imageHosts,
     minimumCacheTTL: 60,
   },
+
   async redirects() {
     return [
       {
@@ -28,11 +42,10 @@ const nextConfig = {
     config.module.rules.push({
       test: /\.(jsx|tsx)$/,
       exclude: [/node_modules/],
-      use: [{
-        loader: '@dhiwise/component-tagger/nextLoader',
-      }],
+      use: [{ loader: '@dhiwise/component-tagger/nextLoader' }],
     });
     return config;
-  },
+  }
 };
-export default nextConfig;
+
+export default withPWA(nextConfig);

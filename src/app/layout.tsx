@@ -5,6 +5,7 @@ import '../styles/tailwind.css';
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
+  themeColor: '#2D6A6A',
 };
 
 export const metadata: Metadata = {
@@ -12,8 +13,25 @@ export const metadata: Metadata = {
   title: 'RubricRepertory — Homeopathic Rubric & Remedy Reference',
   description:
     'A fast, comprehensive digital repertory for homeopathic practitioners and students — search rubrics, explore remedy grades, and navigate the complete rubric index.',
+  manifest: '/manifest.json',
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: 'default',
+    title: 'RubricRepertory',
+  },
   icons: {
-    icon: [{ url: '/favicon.ico', type: 'image/x-icon' }],
+    icon: [
+      { url: '/favicon.ico', type: 'image/x-icon' },
+      { url: '/assets/images/app_logo.png', sizes: '192x192', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/assets/images/app_logo.png', sizes: '192x192', type: 'image/png' },
+    ],
+  },
+  other: {
+    'mobile-web-app-capable': 'yes',
+    'msapplication-TileColor': '#2D6A6A',
+    'msapplication-TileImage': '/assets/images/app_logo.png',
   },
 };
 
