@@ -1,0 +1,309 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Light mode */
+  --bg-primary: #FAF8F3;
+  --bg-secondary: #F2EDE3;
+  --bg-card: #EDEAE0;
+  --bg-elevated: #FFFFFF;
+  --text-primary: #1C1C1C;
+  --text-secondary: #4A4A45;
+  --text-muted: #8A8880;
+  --accent-primary: #2D6A6A;
+  --accent-secondary: #4A9B8E;
+  --accent-light: #D4EBEA;
+  --border-subtle: rgba(28, 28, 28, 0.08);
+  --border-medium: rgba(28, 28, 28, 0.14);
+  --shadow-soft: 0 2px 16px rgba(45, 106, 106, 0.08);
+  --shadow-card: 0 4px 24px rgba(45, 106, 106, 0.10);
+}
+
+.dark {
+  --bg-primary: #0F1A1A;
+  --bg-secondary: #162424;
+  --bg-card: #1A2E2E;
+  --bg-elevated: #1F3535;
+  --text-primary: #F0EDE8;
+  --text-secondary: #B8B4AE;
+  --text-muted: #7A7874;
+  --accent-primary: #4A9B8E;
+  --accent-secondary: #6BBDB0;
+  --accent-light: rgba(74, 155, 142, 0.15);
+  --border-subtle: rgba(240, 237, 232, 0.07);
+  --border-medium: rgba(240, 237, 232, 0.12);
+  --shadow-soft: 0 2px 16px rgba(0, 0, 0, 0.3);
+  --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.4);
+}
+
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+  overflow: hidden;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+  overflow: hidden;
+}
+
+.font-display {
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* Theme transition */
+*, *::before, *::after {
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+}
+
+/* Override for animations that shouldn't be affected */
+.no-transition, .no-transition * {
+  transition: none !important;
+}
+
+/* Botanical SVG animation */
+@keyframes botanicalFloat {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  33% { transform: translateY(-6px) rotate(0.5deg); }
+  66% { transform: translateY(-3px) rotate(-0.3deg); }
+}
+
+@keyframes leafSway {
+  0%, 100% { transform: rotate(-2deg); }
+  50% { transform: rotate(2deg); }
+}
+
+@keyframes stemGrow {
+  0% { stroke-dashoffset: 300; }
+  100% { stroke-dashoffset: 0; }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.94);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulseRing {
+  0% { transform: scale(1); opacity: 0.6; }
+  100% { transform: scale(1.5); opacity: 0; }
+}
+
+@keyframes marqueeScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-botanical-float {
+  animation: botanicalFloat 8s ease-in-out infinite;
+}
+
+.animate-leaf-sway {
+  animation: leafSway 4s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+.animate-stem-grow {
+  stroke-dasharray: 300;
+  animation: stemGrow 2s ease-out forwards;
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.animate-fade-in-left {
+  animation: fadeInLeft 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.animate-marquee-scroll {
+  animation: marqueeScroll 40s linear infinite;
+}
+
+/* Stagger delays */
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
+
+/* Initially hidden for animation */
+.animate-on-load {
+  opacity: 0;
+}
+.animate-on-load.animated {
+  opacity: 1;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--accent-primary);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-secondary);
+}
+
+/* Rubric accordion */
+.rubric-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), padding 0.35s ease;
+}
+
+.rubric-item.open .rubric-content {
+  max-height: 2000px;
+}
+
+.rubric-chevron {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.rubric-item.open .rubric-chevron {
+  transform: rotate(180deg);
+}
+
+/* Chapter accordion */
+.chapter-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.chapter-item.open .chapter-content {
+  max-height: 5000px;
+}
+
+.chapter-chevron {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.chapter-item.open .chapter-chevron {
+  transform: rotate(180deg);
+}
+
+/* Remedy grade badges */
+.grade-3 {
+  background-color: var(--accent-primary);
+  color: white;
+  font-weight: 700;
+}
+
+.grade-2 {
+  background-color: var(--accent-light);
+  color: var(--accent-primary);
+  font-weight: 600;
+}
+
+.grade-1 {
+  background-color: var(--border-subtle);
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+/* Search highlight */
+.search-highlight {
+  background-color: var(--accent-light);
+  color: var(--accent-primary);
+  border-radius: 2px;
+  padding: 0 2px;
+}
+
+/* Filter chip active */
+.filter-chip-active {
+  background-color: var(--accent-primary);
+  color: white;
+  border-color: var(--accent-primary);
+}
+
+/* Card hover */
+.card-hover {
+  transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.25s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-card);
+}
+
+/* Focus ring */
+*:focus-visible {
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Prose-like reading */
+.reading-width {
+  max-width: 72ch;
+}
+
+/* Sticky nav blur */
+.nav-blur {
+  backdrop-filter: blur(16px) saturate(1.4);
+  -webkit-backdrop-filter: blur(16px) saturate(1.4);
+}
+
+/* Pulse ring for CTA */
+.pulse-ring::before {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: inherit;
+  border: 2px solid var(--accent-primary);
+  animation: pulseRing 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
