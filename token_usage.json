@@ -1546,5 +1546,167 @@
       "cache_read_cost": "0.022143",
       "total_cost": "0.023834"
     }
+  },
+  {
+    "session_id": "36806b4a-1b31-47ff-9284-ce1c73451b47",
+    "operation_name": "code_generation_agent_v2",
+    "timestamp": "2026-03-15T08:04:34.339728",
+    "prompt_tokens": 3,
+    "completion_tokens": 309,
+    "cache_creation_tokens": 76446,
+    "cache_read_tokens": 0,
+    "successful_requests": 0,
+    "cost": {
+      "pricing_tier": "\u2264 200K tokens",
+      "input_cost": "0.000009",
+      "output_cost": "0.004635",
+      "cache_write_cost": "0.286672",
+      "cache_read_cost": "0.000000",
+      "total_cost": "0.291316"
+    }
+  },
+  {
+    "session_id": "36806b4a-1b31-47ff-9284-ce1c73451b47",
+    "operation_name": "code_generation_agent_v2",
+    "timestamp": "2026-03-15T08:04:46.625677",
+    "prompt_tokens": 1,
+    "completion_tokens": 919,
+    "cache_creation_tokens": 3349,
+    "cache_read_tokens": 76446,
+    "successful_requests": 0,
+    "cost": {
+      "pricing_tier": "\u2264 200K tokens",
+      "input_cost": "0.000003",
+      "output_cost": "0.013785",
+      "cache_write_cost": "0.012559",
+      "cache_read_cost": "0.022934",
+      "total_cost": "0.049281"
+    }
+  },
+  {
+    "session_id": "36806b4a-1b31-47ff-9284-ce1c73451b47",
+    "operation_name": "code_generation_agent_v2",
+    "timestamp": "2026-03-15T08:04:54.106448",
+    "prompt_tokens": 1,
+    "completion_tokens": 168,
+    "cache_creation_tokens": 1154,
+    "cache_read_tokens": 79795,
+    "successful_requests": 0,
+    "cost": {
+      "pricing_tier": "\u2264 200K tokens",
+      "input_cost": "0.000003",
+      "output_cost": "0.002520",
+      "cache_write_cost": "0.004327",
+      "cache_read_cost": "0.023938",
+      "total_cost": "0.030789"
+    }
+  },
+  {
+    "session_id": "36806b4a-1b31-47ff-9284-ce1c73451b47",
+    "operation_name": "code_generation_agent_v2",
+    "timestamp": "2026-03-15T08:04:57.715795",
+    "prompt_tokens": 1,
+    "completion_tokens": 91,
+    "cache_creation_tokens": 1154,
+    "cache_read_tokens": 80949,
+    "successful_requests": 0,
+    "cost": {
+      "pricing_tier": "\u2264 200K tokens",
+      "input_cost": "0.000003",
+      "output_cost": "0.001365",
+      "cache_write_cost": "0.004327",
+      "cache_read_cost": "0.024285",
+      "total_cost": "0.029980"
+    }
+  },
+  {
+    "session_id": "36806b4a-1b31-47ff-9284-ce1c73451b47",
+    "operation_name": "code_generation_agent_v2",
+    "timestamp": "2026-03-15T08:05:01.174353",
+    "prompt_tokens": 1,
+    "completion_tokens": 91,
+    "cache_creation_tokens": 693,
+    "cache_read_tokens": 82103,
+    "successful_requests": 0,
+    "cost": {
+      "pricing_tier": "\u2264 200K tokens",
+      "input_cost": "0.000003",
+      "output_cost": "0.001365",
+      "cache_write_cost": "0.002599",
+      "cache_read_cost": "0.024631",
+      "total_cost": "0.028598"
+    }
+  },
+  {
+    "session_id": "36806b4a-1b31-47ff-9284-ce1c73451b47",
+    "operation_name": "code_generation_agent_v2",
+    "timestamp": "2026-03-15T08:05:07.661149",
+    "prompt_tokens": 1,
+    "completion_tokens": 327,
+    "cache_creation_tokens": 419,
+    "cache_read_tokens": 82796,
+    "successful_requests": 0,
+    "cost": {
+      "pricing_tier": "\u2264 200K tokens",
+      "input_cost": "0.000003",
+      "output_cost": "0.004905",
+      "cache_write_cost": "0.001571",
+      "cache_read_cost": "0.024839",
+      "total_cost": "0.031318"
+    }
+  },
+  {
+    "session_id": "36806b4a-1b31-47ff-9284-ce1c73451b47",
+    "operation_name": "code_generation_agent_v2",
+    "timestamp": "2026-03-15T08:05:15.371196",
+    "prompt_tokens": 1,
+    "completion_tokens": 141,
+    "cache_creation_tokens": 353,
+    "cache_read_tokens": 83215,
+    "successful_requests": 0,
+    "cost": {
+      "pricing_tier": "\u2264 200K tokens",
+      "input_cost": "0.000003",
+      "output_cost": "0.002115",
+      "cache_write_cost": "0.001324",
+      "cache_read_cost": "0.024965",
+      "total_cost": "0.028406"
+    }
+  },
+  {
+    "session_id": "36806b4a-1b31-47ff-9284-ce1c73451b47",
+    "operation_name": "code_generation_agent_v2",
+    "timestamp": "2026-03-15T08:05:19.512871",
+    "prompt_tokens": 1,
+    "completion_tokens": 128,
+    "cache_creation_tokens": 195,
+    "cache_read_tokens": 83568,
+    "successful_requests": 0,
+    "cost": {
+      "pricing_tier": "\u2264 200K tokens",
+      "input_cost": "0.000003",
+      "output_cost": "0.001920",
+      "cache_write_cost": "0.000731",
+      "cache_read_cost": "0.025070",
+      "total_cost": "0.027725"
+    }
+  },
+  {
+    "session_id": "36806b4a-1b31-47ff-9284-ce1c73451b47",
+    "operation_name": "code_generation_agent_v2",
+    "timestamp": "2026-03-15T08:06:35.084642",
+    "prompt_tokens": 1,
+    "completion_tokens": 139,
+    "cache_creation_tokens": 303,
+    "cache_read_tokens": 83763,
+    "successful_requests": 0,
+    "cost": {
+      "pricing_tier": "\u2264 200K tokens",
+      "input_cost": "0.000003",
+      "output_cost": "0.002085",
+      "cache_write_cost": "0.001136",
+      "cache_read_cost": "0.025129",
+      "total_cost": "0.028353"
+    }
   }
 ]
